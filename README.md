@@ -3,6 +3,13 @@
 Wrapper for Segmind API for using Generative models. 
 Visit [Website](https://www.segmind.com/)
 
+## Installation
+
+Simply Install the pip package by typing the following in the terminal:
+<br>
+
+`pip install segmind`
+
 ## Usage
 
 * Import Required Model Class
@@ -91,6 +98,13 @@ FaceSwap is a state-of-the-art face swapping model that can swap faces in images
 <br> `img = model.generate(imageUrl, maskUrl)`
 
 For additional options, check Docstring of the model.
+
+## Examples
+
+| Model | Code Example | Generated Image |
+| --------------- | --------------- | --------------- |
+| Kadinsky | <center>`Kadinsky(api_key).generate("tiny isometric city on a tiny floating island, highly detailed, 3d render")`</center> | ![image](https://github.com/segmind/segmind-py/assets/95569637/2f48bfc0-99fb-47b6-a0c2-02f3691d2597) |
+| Stable Diffusion v2.1 | <center>`SD2_1(api_key).generate("calico cat wearing a cosmonaut suit, 3d render, pixar style, 8k, high resolution")`</center> | ![image](https://github.com/segmind/segmind-py/assets/95569637/aa615370-abfe-4e4d-aa68-be1144abfce3) |
 
 ## Dependencies
 * PIL (Python Imaging Library)
