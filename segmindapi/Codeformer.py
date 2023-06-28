@@ -1,12 +1,12 @@
 import requests
 from PIL import Image
 from io import BytesIO
-
+from base64 import b64decode
 class Codeformer:
     """
         This API harnesses the power of CodeFormer, a robust face restoration algorithm designed specifically for old photos or AI-generated faces, and is available at https://api.segmind.com/v1/codeformer
         
-        The API accepts a URL of the image to be processed and returns the image with the background removed.
+        The API accepts a URL of the image to be processed and returns the image with the face restored.
 
         The API accepts the following parameters:
             imageUrl = str
@@ -42,18 +42,18 @@ class Codeformer:
         if api_key is None:
             raise Exception("API Key is required")
     
-    def generate(self, image_url, scale = 1, fidelity = 0.5, bg = 1, face = 1, base64 = "true"):
+    def generate(self, imageUrl, scale = 1, fidelity = 0.5, bg = 1, face = 1, base64 = "true"):
         data = {
         "scale": scale,
         "fidelity": fidelity,
         "bg": bg,
         "face": face,
-        "imageUrl": image_url,
+        "imageUrl": imageUrl,
         "base64": base64
     }
         response = requests.post(self.url, json = data, headers = self.headers)
         if response.status_code == 200:
             print(f"Success! You have {response.headers['X-remaining-credits']} credits remaining")
-            return Image.open(BytesIO(response.content))
+            return Image.open(BytesIO(b64decode(response.content[14:])))
         else:
             raise Exception(f"Error: {response.status_code}")

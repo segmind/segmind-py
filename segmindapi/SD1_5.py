@@ -1,6 +1,7 @@
 import requests
 from PIL import Image
 from io import BytesIO
+from .utils import toB64
 
 class SD1_5:
     """
@@ -62,10 +63,10 @@ class SD1_5:
         "guidance_scale": f"{guidance_scale}",
         "seed": f"{seed}",
         "strength": f"{strength}",
-        "imageUrl": imageUrl
+        "image": toB64(imageUrl)
     }
         if maskUrl:
-            data["maskUrl"] = maskUrl
+            data["mask"] = toB64(maskUrl)
             url = "https://api.segmind.com/v1/sd1.5-inpainting"
         else:
             url = "https://api.segmind.com/v1/sd1.5-img2img"

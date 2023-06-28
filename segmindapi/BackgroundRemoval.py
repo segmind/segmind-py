@@ -22,10 +22,10 @@ class BackgroundRemoval:
         if api_key is None:
             raise Exception("API Key is required")
     
-    def generate(self, image_url):
+    def generate(self, imageUrl):
         data = {
-        "method": "image",
-        "image": image_url
+        "method": "object",
+        "imageUrl": imageUrl
     }
         response = requests.post(self.url, json = data, headers = self.headers)
         if response.status_code == 200:

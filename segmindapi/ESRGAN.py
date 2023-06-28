@@ -17,7 +17,7 @@ class ESRGAN:
                 values: 2,4,8 , Default: 2
         
         The API returns the following:
-            The enhanced image.
+            The enhanced image in PIL.Image Format.
         
         It also prints the the number of credits remaining in your account.
     """
@@ -28,10 +28,10 @@ class ESRGAN:
         if api_key is None:
             raise Exception("API Key is required")
 
-    def generate(self, image_url, scale = 2):
+    def generate(self, imageUrl, scale = 2):
         data = {
         "scale": scale,
-        "imageUrl": image_url
+        "imageUrl": imageUrl
     }
         response = requests.post(self.url, json = data, headers = self.headers)
         if response.status_code == 200:

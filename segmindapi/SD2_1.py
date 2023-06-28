@@ -4,7 +4,7 @@ from io import BytesIO
 
 class SD2_1:
     """
-    SDT2I is a class that allows you to generate images from text using the Segmind API.
+    SD2_1 is a class that allows you to generate images from text using the Segmind API.
     The API is available at https://api.segmind.com/v1/sd2.1-txt2img.
 
     The API accepts the following parameters:
@@ -41,11 +41,6 @@ class SD2_1:
             Image resolution. Options are 512 x 512 or 768 x 768.
             Options: ["512","768"]
             Default: 512
-
-        base64: boolean
-            Base64 encoding of the output image. 
-            Optional 
-            Default: false
     """
     def __init__(self, api_key = None):
         self.url = "https://api.segmind.com/v1/sd2.1-txt2img"

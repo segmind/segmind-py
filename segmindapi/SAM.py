@@ -1,6 +1,7 @@
 import requests
 from PIL import Image
 from io import BytesIO
+from .utils import toB64
 
 class SAM:
     """
@@ -10,7 +11,7 @@ class SAM:
             imageUrl: The URL of the image to be processed.
 
         The API returns the following:
-            The segmentation mask of the image.
+            PIL Image of the segmentation mask of the image.
 
         It also prints the number of credits remaining in your account.      
     """
@@ -22,7 +23,7 @@ class SAM:
     
     def generate(self, imageUrl : str):
         data = {
-        "imageUrl": imageUrl
+        "image": toB64(imageUrl)
     }
         response = requests.post(self.url, json = data, headers = self.headers)
         if response.status_code == 200:
