@@ -6,7 +6,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(name='segmindapi',
-      version='0.2',
+      version='0.2.1',
       description='Package for Using Segmind APIs in Python',
       url='https://docs.segmind.com/apis',
       author='Yatharth Gupta',
