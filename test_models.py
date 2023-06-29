@@ -32,7 +32,7 @@ def test_Kadinsky():
 
 def test_SD2_1():
     api_key = getKey()
-    assert type(Kadinsky(api_key).generate(prompt = "calico cat wearing a cosmonaut suit, 3d render, pixar style, 8k, high resolution")) == PIL.JpegImagePlugin.JpegImageFile
+    assert type(SD2_1(api_key).generate(prompt = "calico cat wearing a cosmonaut suit, 3d render, pixar style, 8k, high resolution")) == PIL.JpegImagePlugin.JpegImageFile
 
 def test_SD1_5():
     api_key = getKey()
