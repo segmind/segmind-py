@@ -8,7 +8,7 @@ Visit [Website](https://www.segmind.com/)
 Simply Install the pip package by typing the following in the terminal:
 <br>
 
-`pip install segmind`
+`pip install segmindapi`
 
 ## Usage
 
@@ -166,6 +166,10 @@ You can check the complete list of models [here](https://docs.segmind.com/).
 
 | Model | Code Example | Generated Image |
 | --------------- | --------------- | --------------- |
+| Stable Diffusion XL | `SDXL(api_key).generate(prompt = "cinematic film still, 4k, realistic, ((cinematic photo:1.3)) of panda wearing a blue spacesuit, sitting in a bar, Fujifilm XT3, long shot, ((low light:1.4)), ((looking straight at the camera:1.3)), upper body shot, somber, shallow depth of field, vignette, highly detailed, high budget Hollywood movie, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy")` | <img src="https://www.segmind.com/_next/image?url=%2Fsdxl2.jpeg&w=2048&q=75"> |
+| Stable Diffusion Outpainting | `SDOutpainting(api_key).generate(image = "https://www.segmind.com//image5.png", prompt = "streets in italy")` | <img src = "https://www.segmind.com/_next/image?url=%2Foutpainting-output.jpeg&w=2048&q=75"> |
+| QR Generator | `QRGenerator(api_key).generate(prompt = "A mouth-watering pizza topped with gooey cheese and fresh ingredients, Close-up, Realistic Style, Art Inspirations from Food Photography", qr_text = "www.segmind.com")` | <img src = "https://www.segmind.com/_next/image?url=%2Fqr_output.jpeg&w=2048&q=75"> |
+| Word2Img | `Word2Img(api_key).generate(image = "https://www.segmind.com//word2img_input.png", prompt = "top-view, A mouth-watering pizza topped with gooey cheese and fresh ingredients,Food Photography")` | <img src="https://www.segmind.com/_next/image?url=%2Fword2img_output.jpeg&w=2048&q=75"> |
 | Kadinsky | `Kadinsky(api_key).generate("tiny isometric city on a tiny floating island, highly detailed, 3d render")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/2f48bfc0-99fb-47b6-a0c2-02f3691d2597) |
 | Stable Diffusion v2.1 | `SD2_1(api_key).generate("calico cat wearing a cosmonaut suit, 3d render, pixar style, 8k, high resolution")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/aa615370-abfe-4e4d-aa68-be1144abfce3) |
 | Stable Diffusion img2img | `SD1_5(api_key).generate(prompt = "A fantasy landscape, trending on artstation, mystical sky", imageUrl= "https://segmind.com/sd-img2img-input.jpeg")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/954c62f2-74c2-4fa7-8e2b-89c51c433efc) |
