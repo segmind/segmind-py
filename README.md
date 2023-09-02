@@ -99,6 +99,69 @@ FaceSwap is a state-of-the-art face swapping model that can swap faces in images
 
 For additional options, check Docstring of the model.
 
+### SDOutpainting
+
+The SDOutpainting model is used for outpainting tasks, where the model is given a part of an image and it needs to generate the rest of the image.
+<br> `from segmindapi import SDOutpainting`
+<br> `model = SDOutpainting(api_key)`
+<br> `img = model.generate(imageUrl)`
+
+For additional options, check Docstring of the model.
+
+### Word2Img
+
+A text-to-image model that can generate images from any given text input.
+<br> `from segmindapi import Word2Img`
+<br> `model = Word2Img(api_key)`
+<br> `img = model.generate(image, prompt)`
+
+For additional options, check Docstring of the model.
+
+### QRGenerator
+
+A QR code generator that can generate QR codes from any given text input.
+<br> `from segmindapi import QRGenerator`
+<br> `model = QRGenerator(api_key)`
+<br> `img = model.generate(prompt, qr_text)`
+
+For additional options, check Docstring of the model.
+
+### Text To Image
+
+We support several text to image models:
+
+* Stable Diffusion XL 1.0
+* Segmind Tiny-SD
+* Segmind Tiny-SD (Portrait)
+* Segmind Small-SD
+* Paragon
+* Realistic Vision
+* Reliberate
+* Revanimated
+* Colorful
+* Cartoon
+* Edge of Realism
+* Epic Realism
+* RPG
+* Scifi
+* Cyber Realistic
+* Samaritan
+* RCNZ - Cartoon    
+* Manmarumix
+* Majicmix
+* Juggernaut Final
+* Icbinp
+* Fruit Fusion
+* Flat 2d
+* Fantassified Icons
+* DvArch
+* Dream Shaper
+* Deep Spaced Diffusion
+* Cute Rich Style
+* All in one pixel
+* 526mix
+
+You can check the complete list of models [here](https://docs.segmind.com/).
 ## Examples
 
 | Model | Code Example | Generated Image |
