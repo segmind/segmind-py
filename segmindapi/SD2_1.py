@@ -2,6 +2,7 @@ import requests
 from PIL import Image
 from io import BytesIO
 
+
 class SD2_1:
     """
     SD2_1 is a class that allows you to generate images from text using the Segmind API.
@@ -10,14 +11,14 @@ class SD2_1:
     The API accepts the following parameters:
 
         prompt: str
-            Prompt to render, eg. "Stormtrooper giving a lecture"  
+            Prompt to render, eg. "Stormtrooper giving a lecture"
 
         negative_prompt: str
             Prompts to exclude, eg. "bad anatomy, bad hands, missing fingers"
             Default: None
 
         samples: int
-            Number of output images 
+            Number of output images
             Default: 1
 
         scheduler: str
@@ -42,25 +43,37 @@ class SD2_1:
             Options: ["512","768"]
             Default: 512
     """
-    def __init__(self, api_key = None):
+
+    def __init__(self, api_key=None):
         self.url = "https://api.segmind.com/v1/sd2.1-txt2img"
         self.headers = {"x-api-key": f"{api_key}"}
         if api_key is None:
             raise Exception("API Key is required")
-    
-    def generate(self, prompt, negative_prompt = "nude, disfigured, blurry", samples = 1, scheduler = "DDIM", num_inference_steps = 25, guidance_scale = 7.5, seed = 17123564234):
+
+    def generate(
+        self,
+        prompt,
+        negative_prompt="nude, disfigured, blurry",
+        samples=1,
+        scheduler="DDIM",
+        num_inference_steps=25,
+        guidance_scale=7.5,
+        seed=17123564234,
+    ):
         data = {
-        "prompt": prompt,
-        "negative_prompt": negative_prompt,
-        "samples": f"{samples}",
-        "scheduler": scheduler,
-        "num_inference_steps": f"{num_inference_steps}",
-        "guidance_scale": f"{guidance_scale}",
-        "seed": f"{seed}"
-    }
-        response = requests.post(self.url, json = data, headers = self.headers)
+            "prompt": prompt,
+            "negative_prompt": negative_prompt,
+            "samples": f"{samples}",
+            "scheduler": scheduler,
+            "num_inference_steps": f"{num_inference_steps}",
+            "guidance_scale": f"{guidance_scale}",
+            "seed": f"{seed}",
+        }
+        response = requests.post(self.url, json=data, headers=self.headers)
         if response.status_code == 200:
-            print(f"Success! You have {response.headers['X-remaining-credits']} credits remaining")
+            print(
+                f"Success! You have {response.headers['X-remaining-credits']} credits remaining"
+            )
             return Image.open(BytesIO(response.content))
         else:
             raise Exception(f"Error: {response.status_code}")

@@ -92,5 +92,7 @@ FaceSwap is a state-of-the-art face swapping model that can swap faces in images
 
 For additional options, check Docstring of the model.
 
+
+
 ## Dependencies
 * PIL (Python Imaging Library)
