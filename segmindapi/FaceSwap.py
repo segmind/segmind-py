@@ -3,7 +3,6 @@ from PIL import Image
 from io import BytesIO
 from .utils import toB64
 
-
 class FaceSwap:
     """
     This API allows you to swap faces in images and is available at https://api.segmind.com/v1/sd2.1-faceswapper.

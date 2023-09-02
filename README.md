@@ -3,6 +3,13 @@
 Wrapper for Segmind API for using Generative models. 
 Visit [Website](https://www.segmind.com/)
 
+## Installation
+
+Simply Install the pip package by typing the following in the terminal:
+<br>
+
+`pip install segmind`
+
 ## Usage
 
 * Import Required Model Class
@@ -92,7 +99,24 @@ FaceSwap is a state-of-the-art face swapping model that can swap faces in images
 
 For additional options, check Docstring of the model.
 
+## Examples
 
+| Model | Code Example | Generated Image |
+| --------------- | --------------- | --------------- |
+| Kadinsky | `Kadinsky(api_key).generate("tiny isometric city on a tiny floating island, highly detailed, 3d render")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/2f48bfc0-99fb-47b6-a0c2-02f3691d2597) |
+| Stable Diffusion v2.1 | `SD2_1(api_key).generate("calico cat wearing a cosmonaut suit, 3d render, pixar style, 8k, high resolution")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/aa615370-abfe-4e4d-aa68-be1144abfce3) |
+| Stable Diffusion img2img | `SD1_5(api_key).generate(prompt = "A fantasy landscape, trending on artstation, mystical sky", imageUrl= "https://segmind.com/sd-img2img-input.jpeg")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/954c62f2-74c2-4fa7-8e2b-89c51c433efc) |
+| Stable Diffusion Inpainting | `SD1_5(api_key).generate(prompt = "mecha robot sitting on a bench", imageUrl= "https://segmind.com/inpainting-input-image.jpeg", maskUrl= "https://segmind.com/inpainting-input-mask.jpeg")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/9e350c5b-4c65-4ded-a45f-4b99d87b64f6) |
+| ControlNet Openpose | `ControlNet(api_key).generate(prompt = "a beautiful fashion model, wearing a red polka dress, red door background. hyperrealistic. photorealism, 4k, extremely detailed", imageUrl = "https://segmind.com/fashion2.jpeg", option="OpenPose")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/fcc9eea0-9de7-4cf8-bedf-d20aa1d15013) |
+| ControlNet Scribble | `ControlNet(api_key).generate(prompt = "steampunk underwater helmet, dark ocean background", imageUrl = "https://segmind.com/scribble-input.jpeg", option="Scribble")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/59ff42ba-9d40-4854-bfd5-e6bb2d3bb58e) |
+| ControlNet Soft Edge | `ControlNet(api_key).generate(prompt = "royal chamber with fancy bed", imageUrl = "https://segmind.com/soft-edge-input.jpeg", option="SoftEdge")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/b33cf3d1-8fdc-4dbe-a059-78d1fb140188) |
+| ControlNet Depth | `ControlNet(api_key).generate(prompt = "young african american man, black suit, smiling, white background", imageUrl = "https://segmind.com/depth.jpeg", option="Depth")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/6061cfcb-1e42-4a96-a8c9-a28614ca7456) |
+| ControlNet Canny | `ControlNet(api_key).generate(prompt = "a colorful bird, 4k", imageUrl = "https://segmind.com/canny-input.jpeg", option="Canny")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/2d30867f-3d2f-410a-934a-cd2a3dd9464c) |
+| Background Removal | `BackgroundRemoval(api_key).generate(imageUrl = "https://segmind.com/bg-removal.jpg")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/f91495d1-8e9d-424a-882b-efc7aa9502f2) |
+| Face Swapper | `FaceSwap(api_key).generate(imageUrl = "https://segmind.com/elon.jpg", maskUrl = "https://segmind.com/burn.gif")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/244ff6d2-350a-41bb-ae35-78e86fb8ca5e) |
+| Codeformer | `Codeformer(api_key).generate(imageUrl = "https://segmind.com/codeformer_input.png")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/60b4ce21-e634-4f8b-b155-273c57c07c22) |
+| ESRGAN | `ESRGAN(api_key).generate(imageUrl = "https://segmind.com/butterfly.png")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/d7ec5624-c62f-4820-a40c-7417b71e6a8d) |
+| SAM | `SAM(api_key).generate(imageUrl = "https://segmind.com/kitchen.jpg")` | ![image](https://github.com/segmind/segmind-py/assets/95569637/7f3d8834-a52c-49b4-b66b-93c52c0b5dfe) |
 
 ## Dependencies
 * PIL (Python Imaging Library)

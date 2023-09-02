@@ -28,9 +28,7 @@ class BackgroundRemoval:
         data = {"method": "object", "imageUrl": imageUrl}
         response = requests.post(self.url, json=data, headers=self.headers)
         if response.status_code == 200:
-            print(
-                f"Success! You have {response.headers['X-remaining-credits']} credits remaining"
-            )
+            print(f"Success! You have {response.headers['X-remaining-credits']} credits remaining")
             return Image.open(BytesIO(response.content))
         else:
             raise Exception(f"Error: {response.status_code}")

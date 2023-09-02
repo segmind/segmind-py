@@ -3,7 +3,6 @@ from PIL import Image
 from io import BytesIO
 from .utils import toB64
 
-
 class SD1_5:
     """
     This API allows you to generate images from images and inpaint images using the SD v1.5. It is available at https://api.segmind.com/v1/sd1.5-img2img and https://api.segmind.com/v1/sd1.5-inpainting.
