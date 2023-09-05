@@ -8,12 +8,12 @@ Visit [Website](https://www.segmind.com/)
 Simply Install the pip package by typing the following in the terminal:
 <br>
 
-`pip install segmindapi`
+`pip install segmind`
 
 ## Usage
 
 * Import Required Model Class
-<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  `from segmindapi import Kadinsky`
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  `from segmind import Kadinsky`
 * Instantite Model Class with your [API Key](https://cloud.segmind.com/keys)
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  `model = Kadinsky(api_key)`
 * Generate Image
@@ -36,14 +36,14 @@ Available Options:
 * Scribble
 * SoftEdge
 
-<br> `from segmindapi import ControlNet`
+<br> `from segmind import ControlNet`
 <br> `model = ControlNet(api_key)`
 <br> `img = model.generate(prompt, imageUrl, option)`
 
 For additional options, check Docstring of the model.
 ### SD2_1
 Text-to-image Stable diffusion 2.1 model that can generate images given a natural language prompt.
-<br> `from segmindapi import SD2_1`
+<br> `from segmind import SD2_1`
 <br> `model = SD2_1(api_key)`
 <br> `img = model.generate(prompt)`
 
@@ -51,7 +51,7 @@ For additional options, check Docstring of the model.
 
 ### Kadinsky
 Image-to-image Kadinsky model that can generate images given a natural language prompt.
-<br> `from segmindapi import Kadinsky`
+<br> `from segmind import Kadinsky`
 <br> `model = Kadinsky(api_key)`
 <br> `img = model.generate(prompt)`
 
@@ -60,32 +60,32 @@ For additional options, check Docstring of the model.
 ### SD1_5 Img2Img
 
 A text-to-image diffusion model that can create photorealistic images from any given text input, and additionally has the ability to fill in missing parts of an image by using a mask.
-<br> `from segmindapi import SD1_5`
+<br> `from segmind import SD1_5`
 
 For additional options, check Docstring of the model.
 
 ### ERSGAN
 
 An image-to-image model that upscales low-resolution images into high-resolution ones using a GAN trained on a dataset of high-resolution images.
-<br> `from segmindapi import ERSGAN`
+<br> `from segmind import ERSGAN`
 
 For additional options, check Docstring of the model.
 
 ### BackgroundRemoval
 The background removal model efficiently separates the main subject or the object from its surrounding background, resulting in a clean and isolated foreground.
-<br> `from segmindapi import BackgroundRemoval`
+<br> `from segmind import BackgroundRemoval`
 
 For additional options, check Docstring of the model.
 
 ### Codeformer 
 CodeFormer is a robust face restoration algorithm for old photos or AI-generated faces.
-<br> `from segmindapi import Codeformer`
+<br> `from segmind import Codeformer`
 
 For additional options, check Docstring of the model.
 
 ### SAM
 Segment Anything Model (SAM) is a state-of-the-art image segmentation model that can segment any object in an image.
-<br> `from segmindapi import SAM`
+<br> `from segmind import SAM`
 <br> `model = SAM(api_key)`
 <br> `img = model.generate(imageUrl)`
 
@@ -93,7 +93,7 @@ For additional options, check Docstring of the model.
 
 ### FaceSwap
 FaceSwap is a state-of-the-art face swapping model that can swap faces in images and videos.
-<br> `from segmindapi import FaceSwap`
+<br> `from segmind import FaceSwap`
 <br> `model = FaceSwap(api_key)`
 <br> `img = model.generate(imageUrl, maskUrl)`
 
@@ -102,7 +102,7 @@ For additional options, check Docstring of the model.
 ### SDOutpainting
 
 The SDOutpainting model is used for outpainting tasks, where the model is given a part of an image and it needs to generate the rest of the image.
-<br> `from segmindapi import SDOutpainting`
+<br> `from segmind import SDOutpainting`
 <br> `model = SDOutpainting(api_key)`
 <br> `img = model.generate(imageUrl)`
 
@@ -111,7 +111,7 @@ For additional options, check Docstring of the model.
 ### Word2Img
 
 A text-to-image model that can generate images from any given text input.
-<br> `from segmindapi import Word2Img`
+<br> `from segmind import Word2Img`
 <br> `model = Word2Img(api_key)`
 <br> `img = model.generate(image, prompt)`
 
@@ -120,7 +120,7 @@ For additional options, check Docstring of the model.
 ### QRGenerator
 
 A QR code generator that can generate QR codes from any given text input.
-<br> `from segmindapi import QRGenerator`
+<br> `from segmind import QRGenerator`
 <br> `model = QRGenerator(api_key)`
 <br> `img = model.generate(prompt, qr_text)`
 

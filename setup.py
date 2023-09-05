@@ -5,14 +5,14 @@ from pathlib import Path
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
-setup(name='segmindapi',
-      version='0.2.1',
+setup(name='segmind',
+      version='0.2.2',
       description='Package for Using Segmind APIs in Python',
       url='https://docs.segmind.com/apis',
       author='Yatharth Gupta',
       license='MIT',
-      packages=['segmindapi'],
-      author_email='yatharth1.g@gmail.com',
+      packages=['segmind'],
+      author_email='yatharthg@segmind.com',
       install_requires=[
           'pillow',
       ],
