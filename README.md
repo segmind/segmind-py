@@ -161,7 +161,7 @@ We support several text to image models:
 * All in one pixel
 * 526mix
 
-You can check the complete list of models [here](https://docs.segmind.com/).
+You can check the complete list of models [here](https://segmind.com/models).
 ## Examples
 
 | Model | Code Example | Generated Image |
