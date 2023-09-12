@@ -17,6 +17,8 @@ class SDXL(T2I):
         guidance_scale=7,
         seed=None,
         strength=0.75,
+        style = "base",
+        high_noise_fraction = 0.8
     ):
         return super().generate(
             prompt=prompt,
@@ -27,4 +29,6 @@ class SDXL(T2I):
             guidance_scale=guidance_scale,
             seed=seed,
             strength=strength,
+            style = style,
+            high_noise_fraction = high_noise_fraction
         )
