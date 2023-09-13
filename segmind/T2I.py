@@ -21,6 +21,8 @@ class T2I:
         guidance_scale=7,
         seed=None,
         strength=0.75,
+        style = "base",
+        high_noise_fraction = 0.8
     ):
         if not seed:
             seed = random.randint(0, 1000000000)
@@ -35,6 +37,8 @@ class T2I:
             "guidance_scale": f"{guidance_scale}",
             "seed": f"{seed}",
             "strength": f"{strength}",
+            "style":style,
+            "high_noise_fraction":f"{high_noise_fraction}"
         }
         response = requests.post(self.url, json=data, headers=self.headers)
         if response.status_code == 200:
