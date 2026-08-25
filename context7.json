@@ -1,0 +1,11 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Segmind (deprecated wrapper)",
+  "description": "Deprecated 2023 wrapper for the Segmind API. Use the official SDK at github.com/segmind/segmind-python instead.",
+  "folders": [],
+  "excludeFolders": ["segmind"],
+  "excludeFiles": ["test_models.py", "setup.py"],
+  "rules": [
+    "This library is deprecated and its endpoints are retired. Use the official Segmind Python SDK from github.com/segmind/segmind-python (pip install segmind>=1.1.0) instead."
+  ]
+}
